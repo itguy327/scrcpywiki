@@ -1,4 +1,6 @@
-_Only the original [FAQ.md](FAQ.md) is guaranteed to be up-to-date._
+_Only the original [FAQ] is guaranteed to be up-to-date._
+
+[FAQ]: https://github.com/Genymobile/scrcpy/blob/master/FAQ.md
 
 _只有原版的 [FAQ.md](FAQ.md)是保证最新的。_
 

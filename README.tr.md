@@ -37,13 +37,14 @@ etkinleştirmeniz gerekebilir.
 ### Özet
 
 - Linux: `apt install scrcpy`
-- Windows: [indir][direct-win64]
+- Windows: [indir][README-windows]
 - macOS: `brew install scrcpy`
 
-Kaynak kodu derle: [BUILD] ([basitleştirilmiş süreç][build_simple])
+Kaynak kodu derle: [BUILD] ([basitleştirilmiş süreç][BUILD_simple])
 
-[build]: BUILD.md
-[build_simple]: BUILD.md#simple
+[README-windows]: https://github.com/Genymobile/scrcpy/blob/master/README.md#windows
+[BUILD]: https://github.com/Genymobile/scrcpy/blob/master/BUILD.md
+[BUILD_simple]: https://github.com/Genymobile/scrcpy/blob/master/BUILD.md#simple
 
 ### Linux
 
@@ -79,7 +80,7 @@ Ayrıca [uygulamayı el ile de derleyebilirsiniz][build] ([basitleştirilmiş s�
 
 Windows için (`adb` dahil) tüm gereksinimleri ile derlenmiş bir arşiv mevcut:
 
- - [README](README.md#windows)
+ - [README][README-windows]
 
 [Chocolatey] ile kurulum:
 
@@ -790,13 +791,15 @@ Bakınız [BUILD].
 
 ## Yaygın problemler
 
-Bakınız [FAQ](FAQ.md).
+Bakınız [FAQ].
+
+[FAQ]: https://github.com/Genymobile/scrcpy/blob/master/FAQ.md
 
 ## Geliştiriciler
 
-[Geliştiriciler sayfası]nı okuyun.
+[Geliştiriciler sayfası][DEVELOP]nı okuyun.
 
-[geliştiriciler sayfası]: DEVELOP.md
+[DEVELOP]: https://github.com/Genymobile/scrcpy/blob/master/DEVELOP.md
 
 ## Lisans
 

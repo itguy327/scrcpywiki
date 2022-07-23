@@ -1,4 +1,6 @@
-_Apri il [README](README.md) originale (in inglese) e sempre aggiornato._
+_Apri il [README] originale (in inglese) e sempre aggiornato._
+
+[README]: https://github.com/Genymobile/scrcpy/blob/master/README.md
 
 <img src="app/data/icon.svg" width="128" height="128" alt="scrcpy" align="right" />
 
@@ -57,13 +59,14 @@ In alcuni dispositivi, devi anche abilitare [un'opzione aggiuntiva][control] per
 ### Sommario
 
  - Linux: `apt install scrcpy`
- - Windows: [download](README.md#windows)
+ - Windows: [download][README-windows]
  - macOS: `brew install scrcpy`
 
 Compila dai sorgenti: [BUILD] (in inglese) ([procedimento semplificato][BUILD_simple] (in inglese))
 
-[BUILD]: BUILD.md
-[BUILD_simple]: BUILD.md#simple
+[README-windows]: https://github.com/Genymobile/scrcpy/blob/master/README.md#windows
+[BUILD]: https://github.com/Genymobile/scrcpy/blob/master/BUILD.md
+[BUILD_simple]: https://github.com/Genymobile/scrcpy/blob/master/BUILD.md#simple
 
 
 ### Linux
@@ -994,14 +997,16 @@ Vedi [BUILD] (in inglese).
 
 ## Problemi comuni
 
-Vedi le [FAQ](FAQ.it.md).
+Vedi le [FAQ].
+
+[FAQ]: https://github.com/Genymobile/scrcpy/blob/master/FAQ.md
 
 
 ## Sviluppatori
 
-Leggi la [pagina per sviluppatori].
+Leggi la [pagina per sviluppatori][DEVELOP].
 
-[pagina per sviluppatori]: DEVELOP.md
+[DEVELOP]: https://github.com/Genymobile/scrcpy/blob/master/DEVELOP.md
 
 
 ## Licenza (in inglese)

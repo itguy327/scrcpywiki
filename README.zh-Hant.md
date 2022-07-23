@@ -1,7 +1,8 @@
-_Only the original [README](README.md) is guaranteed to be up-to-date._
+_Only the original [README] is guaranteed to be up-to-date._
 
-_只有原版的 [README](README.md)是保證最新的。_
+_只有原版的 [README]是保證最新的。_
 
+[README]: https://github.com/Genymobile/scrcpy/blob/master/README.md
 
 本文件翻譯時點: [521f2fe](https://github.com/Genymobile/scrcpy/commit/521f2fe994019065e938aa1a54b56b4f10a4ac4a#diff-04c6e90faac2675aa89e2176d2eec7d8)
 
@@ -80,7 +81,9 @@ apt install scrcpy
 
 為了保持簡單，Windows 用戶可以下載一個包含所有必需軟體 (包含 `adb`) 的壓縮包:
 
- - [README](README.md#windows)
+ - [README][README-windows]
+
+[README-windows]: https://github.com/Genymobile/scrcpy/blob/master/README.md#windows
 
 [Chocolatey] 上也可以下載:
 
@@ -101,6 +104,8 @@ scoop install adb    # 如果你還沒有安裝的話
 [Scoop]: https://scoop.sh
 
 你也可以自己[編譯 _Scrcpy_][BUILD]。
+
+[BUILD]: https://github.com/Genymobile/scrcpy/blob/master/BUILD.md
 
 
 ### macOS
@@ -666,14 +671,14 @@ _³只支援 Android 7+。_
 
 請看[這份文件 (英文)][FAQ]。
 
-[FAQ]: FAQ.md
+[FAQ]: https://github.com/Genymobile/scrcpy/blob/master/FAQ.md
 
 
 ## 開發者文件
 
-請看[這個頁面 (英文)][developers page].
+請看[這個頁面 (英文)][DEVELOP].
 
-[developers page]: DEVELOP.md
+[DEVELOP]: https://github.com/Genymobile/scrcpy/blob/master/DEVELOP.md
 
 
 ## Licence

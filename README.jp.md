@@ -1,4 +1,6 @@
-_Only the original [README](README.md) is guaranteed to be up-to-date._
+_Only the original [README] is guaranteed to be up-to-date._
+
+[README]: https://github.com/Genymobile/scrcpy/blob/master/README.md
 
 # scrcpy (v1.19)
 
@@ -71,7 +73,9 @@ Gentoo用[Ebuild]が利用可能: [`scrcpy`][ebuild-link]
 
 Windowsでは簡単に、（`adb`を含む）すべての依存関係を構築済みのアーカイブを利用可能です。
 
- - [README](README.md#windows)
+ - [README][README-windows]
+
+[README-windows]: https://github.com/Genymobile/scrcpy/blob/master/README.md#windows
 
 [Chocolatey]でも利用可能です:
 
@@ -758,19 +762,21 @@ _⁴Android 7以上のみ._
 
 [BUILD]を参照してください。
 
-[BUILD]: BUILD.md
+[BUILD]: https://github.com/Genymobile/scrcpy/blob/master/BUILD.md
 
 
 ## よくある質問
 
-[FAQ](FAQ.md)を参照してください。
+[FAQ]を参照してください。
+
+[FAQ]: https://github.com/Genymobile/scrcpy/blob/master/FAQ.md
 
 
 ## 開発者
 
-[開発者のページ]を読んでください。
+[開発者のページ][DEVELOP]を読んでください。
 
-[開発者のページ]: DEVELOP.md
+[DEVELOP]: https://github.com/Genymobile/scrcpy/blob/master/DEVELOP.md
 
 
 ## ライセンス

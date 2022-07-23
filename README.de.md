@@ -1,4 +1,6 @@
-_Only the original [README](README.md) is guaranteed to be up-to-date._
+_Only the original [README] is guaranteed to be up-to-date._
+
+[README]: https://github.com/Genymobile/scrcpy/blob/master/README.md
 
 # scrcpy (v1.22)
 
@@ -57,13 +59,14 @@ Auf manchen Geräten müssen zudem [weitere Optionen][control] aktiv sein um das
 ### Zusammenfassung
 
  - Linux: `apt install scrcpy`
- - Windows: [download (siehe README)](README.md#windows)
+ - Windows: [download (siehe README)][README-windows]
  - macOS: `brew install scrcpy`
 
 Direkt von der Source bauen: [BUILD] ([vereinfachter Prozess (englisch)][BUILD_simple])
 
-[BUILD]: BUILD.md
-[BUILD_simple]: BUILD.md#simple
+[README-windows]: https://github.com/Genymobile/scrcpy/blob/master/README.md#windows
+[BUILD]: https://github.com/Genymobile/scrcpy/blob/master/BUILD.md
+[BUILD_simple]: https://github.com/Genymobile/scrcpy/blob/master/BUILD.md#simple
 
 
 ### Linux
@@ -984,10 +987,14 @@ Siehe [BUILD].
 
 Siehe [FAQ](FAQ.md).
 
+[FAQ]: https://github.com/Genymobile/scrcpy/blob/master/FAQ.md
+
 
 ## Entwickler
 
 [Entwicklerseite](DEVELOP.md).
+
+[DEVELOP]: https://github.com/Genymobile/scrcpy/blob/master/DEVELOP.md
 
 
 ## Licence

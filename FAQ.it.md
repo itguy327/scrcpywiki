@@ -1,4 +1,6 @@
-_Apri le [FAQ](FAQ.md) originali e sempre aggiornate._
+_Apri le [FAQ] originali e sempre aggiornate._
+
+[FAQ]: https://github.com/Genymobile/scrcpy/blob/master/FAQ.md
 
 # Domande Frequenti (FAQ)
 

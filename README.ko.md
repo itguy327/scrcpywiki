@@ -1,4 +1,6 @@
-_Only the original [README](README.md) is guaranteed to be up-to-date._
+_Only the original [README] is guaranteed to be up-to-date._
+
+[README]: https://github.com/Genymobile/scrcpy/blob/master/README.md
 
 # scrcpy (v1.11)
 
@@ -68,7 +70,9 @@ Gentoo에서 ,[Ebuild] 가 가능합니다 : [`scrcpy/`][ebuild-link].
 
 윈도우 상에서, 간단하게 설치하기 위해 종속성이 있는 사전 구축된 아카이브가 제공됩니다 (`adb` 포함) :
 해당 파일은 Readme원본 링크를 통해서 다운로드가 가능합니다.
- - [README](README.md#windows)
+ - [README][README-windows]
+
+[README-windows]: https://github.com/Genymobile/scrcpy/blob/master/README.md#windows
 
 
 [어플을 직접 설치][BUILD] 할 수도 있습니다.
@@ -458,18 +462,20 @@ _²화면이 꺼진 상태에서 우클릭 시 다시 켜지며, 그 외의 상�
 
 [BUILD]을 참고하세요.
 
-[BUILD]: BUILD.md
+[BUILD]: https://github.com/Genymobile/scrcpy/blob/master/BUILD.md
 
 ## 흔한 issue
 
-[FAQ](FAQ.md)을 참고하세요.
+[FAQ]을 참고하세요.
+
+[FAQ]: https://github.com/Genymobile/scrcpy/blob/master/FAQ.md
 
 
 ## 개발자들
 
-[developers page]를 참고하세요.
+[developers page][DEVELOP]를 참고하세요.
 
-[developers page]: DEVELOP.md
+[DEVELOP]: https://github.com/Genymobile/scrcpy/blob/master/DEVELOP.md
 
 
 ## 라이선스

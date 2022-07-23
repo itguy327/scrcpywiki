@@ -1,4 +1,6 @@
-_Only the original [README](README.md) is guaranteed to be up-to-date._
+_Only the original [README] is guaranteed to be up-to-date._
+
+[README]: https://github.com/Genymobile/scrcpy/blob/master/README.md
 
 # scrcpy (v1.16)
 
@@ -64,12 +66,16 @@ Untuk Gentoo, tersedia [Ebuild]: [`scrcpy/`][ebuild-link].
 
 Anda juga bisa [membangun aplikasi secara manual][BUILD] (jangan khawatir, tidak terlalu sulit).
 
+[BUILD]: https://github.com/Genymobile/scrcpy/blob/master/BUILD.md
+
 
 ### Windows
 
 Untuk Windows, untuk kesederhanaan, arsip prebuilt dengan semua dependensi (termasuk `adb`) tersedia :
 
- - [README](README.md#windows)
+ - [README][README-windows]
+
+[README-windows]: https://github.com/Genymobile/scrcpy/blob/master/README.md#windows
 
 Ini juga tersedia di [Chocolatey]:
 
@@ -654,19 +660,19 @@ Seorang kolega menantang saya untuk menemukan nama yang tidak dapat diucapkan se
 
 Lihat [BUILD].
 
-[BUILD]: BUILD.md
-
 
 ## Masalah umum
 
-Lihat [FAQ](FAQ.md).
+Lihat [FAQ].
+
+[FAQ]: https://github.com/Genymobile/scrcpy/blob/master/FAQ.md
 
 
 ## Pengembang
 
-Baca [halaman pengembang].
+Baca [halaman pengembang][DEVELOP].
 
-[halaman pengembang]: DEVELOP.md
+[DEVELOP]: https://github.com/Genymobile/scrcpy/blob/master/DEVELOP.md
 
 
 ## Lisensi

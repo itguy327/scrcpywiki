@@ -1,6 +1,8 @@
-_Only the original [README](README.md) is guaranteed to be up-to-date._
+_Only the original [README] is guaranteed to be up-to-date._
 
-_只有原版的 [README](README.md)是保证最新的。_
+_只有原版的 [README]是保证最新的。_
+
+[README]: https://github.com/Genymobile/scrcpy/blob/master/README.md
 
 Current version is based on [f4c7044]
 
@@ -62,13 +64,14 @@ _发音为 "**scr**een **c**o**py**"_
 ### 概要
 
  - Linux: `apt install scrcpy`
- - Windows: [下载][direct-win64]
+ - Windows: [下载][README-windows]
  - macOS: `brew install scrcpy`
 
 从源代码编译: [构建][BUILD] ([简化过程][BUILD_simple])
 
-[BUILD]: BUILD.md
-[BUILD_simple]: BUILD.md#simple
+[README-windows]: https://github.com/Genymobile/scrcpy/blob/master/README.md#windows
+[BUILD]: https://github.com/Genymobile/scrcpy/blob/master/BUILD.md
+[BUILD_simple]: https://github.com/Genymobile/scrcpy/blob/master/BUILD.md#simple
 
 ### Linux
 
@@ -957,14 +960,16 @@ ADB=/path/to/adb scrcpy
 
 ## 常见问题
 
-请查看 [FAQ](FAQ.md)。
+请查看 [FAQ]。
+
+[FAQ]: https://github.com/Genymobile/scrcpy/blob/master/FAQ.md
 
 
 ## 开发者
 
-请查看[开发者页面]。
+请查看[开发者页面][DEVELOP]。
 
-[开发者页面]: DEVELOP.md
+[DEVELOP]: https://github.com/Genymobile/scrcpy/blob/master/DEVELOP.md
 
 
 ## 许可协议
