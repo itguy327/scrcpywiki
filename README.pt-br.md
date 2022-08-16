@@ -50,8 +50,8 @@ controlá-lo usando teclado e mouse.
 
   Compilar pelos arquivos fontes: [BUILD] ([processo simplificado][BUILD_simple])
 
-[BUILD]: BUILD.md
-[BUILD_simple]: BUILD.md#simple
+[BUILD]: https://github.com/Genymobile/scrcpy/blob/master/BUILD.md
+[BUILD_simple]: https://github.com/Genymobile/scrcpy/blob/master/BUILD.md#simple
 
 
 ### Linux
@@ -92,7 +92,7 @@ Você também pode [compilar o app manualmente][BUILD] ([processo simplificado][
 Para Windows, por simplicidade, um arquivo pré-compilado com todas as dependências
 (incluindo `adb`) está disponível:
 
- - [README](README.md#windows)
+ - [README](https://github.com/Genymobile/scrcpy/blob/master/README.md#windows)
 
 Também está disponível em [Chocolatey]:
 
@@ -1126,14 +1126,14 @@ Veja [BUILD].
 
 Veja o [FAQ].
 
-[FAQ:] FAQ.md
+[FAQ]: https://github.com/Genymobile/scrcpy/blob/master/FAQ.md
 
 
 ## Desenvolvedores
 
 Leia a [página dos desenvolvedores][developers_page].
 
-[developers_page]: DEVELOP.md
+[developers_page]: https://github.com/Genymobile/scrcpy/blob/master/DEVELOP.md
 
 
 ## Licença
