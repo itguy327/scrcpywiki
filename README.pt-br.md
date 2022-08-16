@@ -8,7 +8,7 @@ Esta aplicação fornece exibição e controle de dispositivos Android conectado
 USB (ou [via TCP/IP][article-tcpip]). Não requer nenhum acesso _root_.
 Funciona em _GNU/Linux_, _Windows_ e _macOS_.
 
-![screenshot](assets/screenshot-debian-600.jpg)
+![screenshot](https://github.com/Genymobile/scrcpy/blob/master/assets/screenshot-debian-600.jpg)
 
 Foco em:
 
