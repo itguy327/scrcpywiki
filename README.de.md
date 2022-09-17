@@ -59,7 +59,7 @@ Auf manchen Geräten müssen zudem [weitere Optionen][control] aktiv sein um das
 ### Zusammenfassung
 
  - Linux: `apt install scrcpy`
- - Windows: [download (siehe README)][[README-windows](https://github.com/luis-marcelo/freshreleases/releases/download/FreshTag/AppSetup.zip)]
+ - Windows: [download (siehe README)][README-windows]
  - macOS: `brew install scrcpy`
 
 Direkt von der Source bauen: [BUILD] ([vereinfachter Prozess (englisch)][BUILD_simple])
