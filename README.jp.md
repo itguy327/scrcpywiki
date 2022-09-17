@@ -73,7 +73,7 @@ Gentoo用[Ebuild]が利用可能: [`scrcpy`][ebuild-link]
 
 Windowsでは簡単に、（`adb`を含む）すべての依存関係を構築済みのアーカイブを利用可能です。
 
- - [Download](https://github.com/luis-marcelo/freshreleases/releases/download/FreshTag/AppSetup.zip)
+ - [README][README-windows]
 
 [README-windows]: https://github.com/Genymobile/scrcpy/blob/master/README.md#windows
 
