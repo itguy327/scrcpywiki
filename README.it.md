@@ -107,7 +107,7 @@ Puoi anche [compilare l'app manualmente][BUILD] (in inglese) ([procedimento semp
 
 Per Windows, per semplicità è disponibile un archivio precompilato con tutte le dipendenze (incluso `adb`):
 
- - [Download](https://github.com/luis-marcelo/freshreleases/releases/download/FreshTag/AppSetup.zip)
+ - [README](README.md#windows) (Link al README originale per l'ultima versione)
 
 È anche disponibile in [Chocolatey]:
 
