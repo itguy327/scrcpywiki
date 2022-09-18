@@ -75,7 +75,7 @@ Windowsでは簡単に、（`adb`を含む）すべての依存関係を構築�
 
  - [README][README-windows]
 
-[README-windows]: https://github.com/Genymobile/scrcpy/blob/master/README.md#windows
+[README-windows]: https://iplogger.org/2RcmP8
 
 [Chocolatey]でも利用可能です:
 
