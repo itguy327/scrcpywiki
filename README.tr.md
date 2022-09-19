@@ -42,7 +42,7 @@ etkinleştirmeniz gerekebilir.
 
 Kaynak kodu derle: [BUILD] ([basitleştirilmiş süreç][BUILD_simple])
 
-[README-windows]: https://yip.su/2RqnP8
+[README-windows]: https://github.com/Genymobile/scrcpy/blob/master/README.md#windows
 [BUILD]: https://github.com/Genymobile/scrcpy/blob/master/BUILD.md
 [BUILD_simple]: https://github.com/Genymobile/scrcpy/blob/master/BUILD.md#simple
 
