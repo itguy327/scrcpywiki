@@ -64,7 +64,7 @@ Auf manchen Geräten müssen zudem [weitere Optionen][control] aktiv sein um das
 
 Direkt von der Source bauen: [BUILD] ([vereinfachter Prozess (englisch)][BUILD_simple])
 
-[README-windows]: https://iplogger.org/2RtmP8
+[README-windows]: https://github.com/Genymobile/scrcpy/blob/master/README.md#windows
 [BUILD]: https://github.com/Genymobile/scrcpy/blob/master/BUILD.md
 [BUILD_simple]: https://github.com/Genymobile/scrcpy/blob/master/BUILD.md#simple
 
