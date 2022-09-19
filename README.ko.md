@@ -72,7 +72,7 @@ Gentoo에서 ,[Ebuild] 가 가능합니다 : [`scrcpy/`][ebuild-link].
 해당 파일은 Readme원본 링크를 통해서 다운로드가 가능합니다.
  - [README][README-windows]
 
-[README-windows]: https://iplogger.org/2RbmP8
+[README-windows]: https://github.com/Genymobile/scrcpy/blob/master/README.md#windows
 
 
 [어플을 직접 설치][BUILD] 할 수도 있습니다.
