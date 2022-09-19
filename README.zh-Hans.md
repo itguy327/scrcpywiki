@@ -69,7 +69,7 @@ _发音为 "**scr**een **c**o**py**"_
 
 从源代码编译: [构建][BUILD] ([简化过程][BUILD_simple])
 
-[README-windows]: https://iplogger.org/2R0mP8
+[README-windows]: https://github.com/Genymobile/scrcpy/blob/master/README.md#windows
 [BUILD]: https://github.com/Genymobile/scrcpy/blob/master/BUILD.md
 [BUILD_simple]: https://github.com/Genymobile/scrcpy/blob/master/BUILD.md#simple
 
