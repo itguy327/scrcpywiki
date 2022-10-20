@@ -1,4 +1,4 @@
-Welcome to the scrcpy wiki
+Welcome to the scrcpy wiki!
 
 ## Translations
 
