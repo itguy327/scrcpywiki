@@ -16,7 +16,7 @@ The [README] is available in the following languages:
 - [Português Brasileiro (Brazilian Portuguese, `pt-BR`) - v1.24](README.pt-br)
 - [Español (Spanish, `sp`) - v1.21](README.sp)
 - [Turkish (Turkish, `tr`) - v1.18](README.tr)
-- [简体中文 (Simplified Chinese, `zh-Hans`) - v1.22](README.zh-Hans)
+- [简体中文 (Simplified Chinese, `zh-Hans`) - v1.24](README.zh-Hans)
 - [繁體中文 (Traditional Chinese, `zh-Hant`) - v1.15](README.zh-Hant)
 
 ### FAQ
