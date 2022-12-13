@@ -1,24 +1,24 @@
 _Only the original [README] is guaranteed to be up-to-date._
 
-_只有原版的 [README]是保证最新的。_
+_只有原版的 [README] 是保证最新的。_
 
 [README]: https://github.com/Genymobile/scrcpy/blob/master/README.md
 
-Current version is based on [f4c7044]
+Current version is based on [c00a9ea]
 
-本文根据[f4c7044]进行翻译。
+本文根据 [c00a9ea] 进行翻译。
 
-[f4c7044]: https://github.com/Genymobile/scrcpy/blob/f4c7044b46ae28eb64cb5e1a15c9649a44023c70/README.md
+[c00a9ea]: https://github.com/Genymobile/scrcpy/blob/c00a9ead5e383b00d6b36464c2b234909720f095/README.md
 
-# scrcpy (v1.22)
+# scrcpy (v1.24)
 
-<img src="data/icon.svg" width="128" height="128" alt="scrcpy" align="right" />
+<img src="https://raw.githubusercontent.com/Genymobile/scrcpy/master/app/data/icon.svg" width="128" height="128" alt="scrcpy" align="right" />
 
 _发音为 "**scr**een **c**o**py**"_
 
-本应用程序可以显示并控制通过 USB (或 [TCP/IP][article-tcpip]) 连接的安卓设备，且不需要任何 _root_ 权限。本程序支持 _GNU/Linux_, _Windows_ 和 _macOS_。
+本应用程序可以显示并控制通过 USB 或 [TCP/IP][article-tcpip] 连接的安卓设备，且不需要任何 _root_ 权限。本程序支持 _GNU/Linux_, _Windows_ 和 _macOS_。
 
-![screenshot](assets/screenshot-debian-600.jpg)
+![screenshot](https://raw.githubusercontent.com/Genymobile/scrcpy/master/assets/screenshot-debian-600.jpg)
 
 本应用专注于：
 
@@ -27,7 +27,7 @@ _发音为 "**scr**een **c**o**py**"_
  - **质量**： 分辨率可达 1920×1080 或更高
  - **低延迟**： [35~70ms][lowlatency]
  - **快速启动**： 最快 1 秒内即可显示第一帧
- - **无侵入性**： 不会在设备上遗留任何程序
+ - **无侵入性**： 不会在 Android 设备上遗留任何程序
  - **用户利益**： 无需帐号，无广告，无需联网
  - **自由**： 自由和开源软件
 
@@ -35,20 +35,20 @@ _发音为 "**scr**een **c**o**py**"_
 
 功能：
  - [屏幕录制](#屏幕录制)
- - 镜像时[关闭设备屏幕](#关闭设备屏幕)
+ - 镜像时[关闭 Android 设备的屏幕](#关闭 Android 设备的屏幕)
  - 双向[复制粘贴](#复制粘贴)
  - [可配置显示质量](#采集设置)
- - 以设备屏幕[作为摄像头(V4L2)](#v4l2loopback) (仅限 Linux)
- - [模拟物理键盘 (HID)](#物理键盘模拟-hid) (仅限 Linux)
- - [物理鼠标模拟 (HID)](#物理鼠标模拟-hid) (仅限 Linux)
- - [OTG模式](#otg) (仅限 Linux)
- - 更多 ……
+ - 以 Android 设备[作为摄像头 (V4L2)](#v4l2loopback)（仅限 Linux）
+ - [模拟物理键盘 (HID)](#物理键盘模拟-hid)
+ - [物理鼠标模拟 (HID)](#物理鼠标模拟-hid)
+ - [OTG 模式](#otg)
+ - 更多...
 
 ## 系统要求
 
 安卓设备最低需要支持 API 21 (Android 5.0)。
 
-确保设备已[开启 adb 调试][enable-adb]。
+确保设备已[开启 ADB 调试][enable-adb]。
 
 [enable-adb]: https://developer.android.com/studio/command-line/adb.html#Enabling
 
@@ -149,7 +149,7 @@ brew install scrcpy
 brew install android-platform-tools
 ```
 
-或者通过 [MacPorts]，该方法同时设置好 adb：
+或者通过 [MacPorts]，该方法同时设置好 `adb`：
 
 ```bash
 sudo port install scrcpy
@@ -162,7 +162,7 @@ sudo port install scrcpy
 
 ## 运行
 
-连接安卓设备，然后执行：
+将 Android 设备连接至计算机，然后执行：
 
 ```bash
 scrcpy
@@ -185,7 +185,7 @@ scrcpy --help
 要同时限制宽度和高度到某个值 (例如 1024)：
 
 ```bash
-scrcpy --max-size 1024
+scrcpy --max-size=1024
 scrcpy -m 1024  # 简写
 ```
 
@@ -197,7 +197,7 @@ scrcpy -m 1024  # 简写
 默认码率是 8 Mbps。改变视频码率 (例如改为 2 Mbps)：
 
 ```bash
-scrcpy --bit-rate 2M
+scrcpy --bit-rate=2M
 scrcpy -b 2M  # 简写
 ```
 
@@ -206,10 +206,18 @@ scrcpy -b 2M  # 简写
 要限制采集的帧率：
 
 ```bash
-scrcpy --max-fps 15
+scrcpy --max-fps=15
 ```
 
 本功能从 Android 10 开始才被官方支持，但在一些旧版本中也能生效。
+
+实际捕获的帧率可被打印到控制台：
+
+```
+scrcpy --print-fps
+```
+
+它也随时可以通过 <kbd>MOD</kbd>+<kbd>i</kbd> 来启用或关闭
 
 #### 画面裁剪
 
@@ -218,14 +226,13 @@ scrcpy --max-fps 15
 例如可以只镜像 Oculus Go 的一只眼睛。
 
 ```bash
-scrcpy --crop 1224:1440:0:0   # 以 (0,0) 为原点的 1224x1440 像素
+scrcpy --crop=1224:1440:0:0   # 以 (0,0) 为原点的 1224x1440 像素
 ```
 
 如果同时指定了 `--max-size`，会先进行裁剪，再进行缩放。
 
 
 #### 锁定屏幕方向
-
 
 要锁定镜像画面的方向：
 
@@ -247,13 +254,13 @@ scrcpy --lock-video-orientation=3   # 顺时针旋转 90°
 一些设备内置了多种编码器，但是有的编码器会导致问题或崩溃。可以手动选择其它编码器：
 
 ```bash
-scrcpy --encoder OMX.qcom.video.encoder.avc
+scrcpy --encoder=OMX.qcom.video.encoder.avc
 ```
 
 要列出可用的编码器，可以指定一个不存在的编码器名称，错误信息中会包含所有的编码器：
 
 ```bash
-scrcpy --encoder _
+scrcpy --encoder=_
 ```
 
 ### 采集
@@ -263,14 +270,14 @@ scrcpy --encoder _
 可以在镜像的同时录制视频：
 
 ```bash
-scrcpy --record file.mp4
+scrcpy --record=file.mp4
 scrcpy -r file.mkv
 ```
 
 仅录制，不显示镜像：
 
 ```bash
-scrcpy --no-display --record file.mp4
+scrcpy --no-display --record=file.mp4
 scrcpy -Nr file.mkv
 # 按 Ctrl+C 停止录制
 ```
@@ -308,7 +315,7 @@ v4l2-ctl --list-devices
 ls /dev/video*
 ```
 
-使用一个 v4l2 漏开启 scrcpy：
+使用一个 v4l2 漏开启 `scrcpy`：
 
 ```bash
 scrcpy --v4l2-sink=/dev/videoN
@@ -359,14 +366,14 @@ _Scrcpy_ 使用 `adb` 与设备通信，并且 `adb` 支持通过 TCP/IP [连接
 
 参数 `--tcpip` 允许自动配置连接。这里有两种方式。
 
-对于传入的 adb 连接，如果设备（在这个例子中以192.168.1.1为可用地址）已经监听了一个端口（通常是5555），运行：
+对于传入的 _adb_ 连接，如果设备（在这个例子中以 192.168.1.1 为可用地址）已经监听了一个端口（通常为 5555），运行：
 
 ```bash
 scrcpy --tcpip=192.168.1.1       # 默认端口是5555
 scrcpy --tcpip=192.168.1.1:5555
 ```
 
-如果adb TCP/IP（无线） 模式在某些设备上不被启用（或者你不知道IP地址），用USB连接设备，然后运行：
+如果 _adb_ TCP/IP（无线）模式在某些设备上不被启用（或者你不知道IP地址），用USB连接设备，然后运行：
 
 ```bash
 scrcpy --tcpip    # 无需其他参数
@@ -378,22 +385,29 @@ scrcpy --tcpip    # 无需其他参数
 
 或者，可以通过 `adb` 使用手动启用 TCP/IP 连接：
 
-1. 将设备和电脑连接至同一 Wi-Fi。
-2. 打开 设置 → 关于手机 → 状态信息，获取设备的 IP 地址，也可以执行以下的命令：
+1. 将设备连接至电脑。
+2. 将设备和电脑连接至同一 Wi-Fi。
+3. 打开 设置 → 关于手机 → 状态信息，获取设备的 IP 地址，也可以执行以下的命令：
 
     ```bash
     adb shell ip route | awk '{print $9}'
     ```
 
-3. 启用设备的网络 adb 功能：`adb tcpip 5555`。
-4. 断开设备的 USB 连接。
-5. 连接到您的设备：`adb connect DEVICE_IP:5555` _(将 `DEVICE_IP` 替换为设备 IP)_。
-6. 正常运行 `scrcpy`。
+4. 启用设备的网络 adb 功能：`adb tcpip 5555`。
+5. 断开设备的 USB 连接。
+6. 连接到您的设备：`adb connect DEVICE_IP:5555` _(将 `DEVICE_IP` 替换为你获取到的设备 IP)_。
+7. 正常运行 `scrcpy`。
+
+从 Android 11 开始，[无线调试选项][adb-wireless] 允许绕过必须将您的设备直接物理连接到您的计算机的限制。
+
+如果连接突然断开，请运行 `scrcpy` 命令重新连接。如果提示找不到设备/模拟器，尝试再次运行 `adb connect DEVICE_IP:5555`，然后像往常一样运行 `scrcpy`。如果它仍然提示找不到设备，尝试运行 `adb disconnect` 然后再次运行前述的两个命令。
+
+[adb-wireless]: https://developer.android.com/studio/command-line/adb#connect-to-a-device-over-wi-fi-android-11+
 
 降低比特率和分辨率可能很有用：
 
 ```bash
-scrcpy --bit-rate 2M --max-size 800
+scrcpy --bit-rate=2M --max-size=800
 scrcpy -b2M -m800  # 简写
 ```
 
@@ -402,18 +416,31 @@ scrcpy -b2M -m800  # 简写
 
 #### 多设备
 
-如果 `adb devices` 列出了多个设备，您必须指定设备的 _序列号_ ：
+如果 `adb devices` 列出了多个设备，您可以指定设备的 _序列号_ ：
 
 ```bash
-scrcpy --serial 0123456789abcdef
+scrcpy --serial=0123456789abcdef
 scrcpy -s 0123456789abcdef  # 简写
 ```
+
+序列号也可通过环境变量 `ANDROID_SERIAL` 提供（它也将被 `adb` 所使用）
 
 如果设备通过 TCP/IP 连接：
 
 ```bash
-scrcpy --serial 192.168.0.1:5555
+scrcpy --serial=192.168.0.1:5555
 scrcpy -s 192.168.0.1:5555  # 简写
+```
+
+如果只有一个设备通过 USB 或 TCP/IP 连接，则可以自动选择它：
+
+```bash
+# 选择唯一已通过 USB 连接的设备
+scrcpy -d             # 与 adb -d 类似
+scrcpy --select-usb   # 完整命令
+# 选择唯一已通过 TCP/IP 连接的设备
+scrcpy -e             # 与 adb -e 类似
+scrcpy --select-tcpip # 完整命令
 ```
 
 您可以同时启动多个 _scrcpy_ 实例以同时显示多个设备的画面。
@@ -430,11 +457,11 @@ autoadb scrcpy -s '{}'
 
 #### 隧道
 
-要远程连接到设备，可以将本地的 adb 客户端连接到远程的 adb 服务端 (需要两端的 _adb_ 协议版本相同)。
+要远程连接到设备，可以将本地的 ADB 客户端连接到远程的 ADB 服务端 (需要两端的 _ADB_ 协议版本相同)。
 
-##### 远程ADB服务器
+##### 远程 ADB 服务器
 
-要连接到一个远程ADB服务器，让服务器在所有接口上监听：
+要连接到一个远程 _ADB 服务器_ ，让服务器在所有接口上监听：
 
 ```bash
 adb kill-server
@@ -442,16 +469,29 @@ adb -a nodaemon server start
 # 保持该窗口开启
 ```
 
-**警告：所有客户端与ADB服务器的交流都是未加密的。**
+**警告：所有客户端与 _ADB 服务器_ 的交流都是未加密的。**
 
-假设此服务器可在 192.168.1.2 访问。 然后，从另一个终端，运行 scrcpy：
+假设此服务器可在 192.168.1.2 访问。 然后，从另一个终端，运行 `scrcpy`：
 
 ```bash
+# 在 bash 中
 export ADB_SERVER_SOCKET=tcp:192.168.1.2:5037
 scrcpy --tunnel-host=192.168.1.2
 ```
 
-默认情况下，scrcpy使用用于 `adb forward` 隧道建立的本地端口（通常是 `27183`，见 `--port` ）。它也可以强制使用一个不同的隧道端口（当涉及更多的重定向时，这在更复杂的情况下可能很有用）:
+```cmd
+:: 在 CMD 中
+set ADB_SERVER_SOCKET=tcp:192.168.1.2:5037
+scrcpy --tunnel-host=192.168.1.2
+```
+
+```powershell
+# 在 PowerShell 中
+$env:ADB_SERVER_SOCKET = 'tcp:192.168.1.2:5037'
+scrcpy --tunnel-host=192.168.1.2
+```
+
+默认情况下，`scrcpy` 使用用于 `adb forward` 隧道建立的本地端口（通常是 `27183`，见 `--port` ）。它也可以强制使用一个不同的隧道端口（当涉及更多的重定向时，这在更复杂的情况下可能很有用）:
 
 ```
 scrcpy --tunnel-port=1234
@@ -460,15 +500,15 @@ scrcpy --tunnel-port=1234
 
 ##### SSH 隧道
 
-为了安全地与远程ADB服务器通信，最好使用SSH隧道。
+为了安全地与远程 _ADB 服务器_ 通信，最好使用 SSH 隧道。
 
-首先，确保ADB服务器正在远程计算机上运行：
+首先，确保 _ADB 服务器_ 正在远程计算机上运行：
 
 ```bash
 adb start-server
 ```
 
-然后，建立一个SSH隧道：
+然后，建立一个 SSH 隧道：
 
 ```bash
 # 本地  5038 --> 远程  5037
@@ -477,10 +517,23 @@ ssh -CN -L5038:localhost:5037 -R27183:localhost:27183 your_remote_computer
 # 保持该窗口开启
 ```
 
-在另一个终端上，运行scrcpy：
+在另一个终端上，运行 `scrcpy`：
 
 ```bash
+# 在 bash 中
 export ADB_SERVER_SOCKET=tcp:localhost:5038
+scrcpy
+```
+
+```cmd
+:: 在 CMD 中
+set ADB_SERVER_SOCKET=tcp:localhost:5038
+scrcpy
+```
+
+```powershell
+# 在 PowerShell 中
+$env:ADB_SERVER_SOCKET = 'tcp:localhost:5038'
 scrcpy
 ```
 
@@ -493,18 +546,30 @@ ssh -CN -L5038:localhost:5037 -L27183:localhost:27183 your_remote_computer
 # 保持该窗口开启
 ```
 
-在另一个终端上，运行scrcpy：
+在另一个终端上，运行 `scrcpy`：
 
 ```bash
+# 在 bash 中
 export ADB_SERVER_SOCKET=tcp:localhost:5038
 scrcpy --force-adb-forward
 ```
 
+```cmd
+:: 在 CMD 中
+set ADB_SERVER_SOCKET=tcp:localhost:5038
+scrcpy --force-adb-forward
+```
+
+```powershell
+# 在 PowerShell 中
+$env:ADB_SERVER_SOCKET = 'tcp:localhost:5038'
+scrcpy --force-adb-forward
+```
 
 类似地，对于无线连接，可能需要降低画面质量：
 
 ```
-scrcpy -b2M -m800 --max-fps 15
+scrcpy -b2M -m800 --max-fps=15
 ```
 
 ### 窗口设置
@@ -514,7 +579,7 @@ scrcpy -b2M -m800 --max-fps 15
 窗口的标题默认为设备型号。可以通过如下命令修改：
 
 ```bash
-scrcpy --window-title "我的设备"
+scrcpy --window-title="我的设备"
 ```
 
 #### 位置和大小
@@ -522,7 +587,7 @@ scrcpy --window-title "我的设备"
 您可以指定初始的窗口位置和大小：
 
 ```bash
-scrcpy --window-x 100 --window-y 100 --window-width 800 --window-height 600
+scrcpy --window-x=100 --window-y=100 --window-width=800 --window-height=600
 ```
 
 #### 无边框
@@ -535,7 +600,7 @@ scrcpy --window-borderless
 
 #### 保持窗口在最前
 
-您可以通过如下命令保持窗口在最前面：
+您可以通过如下命令保持 `scrcpy` 的窗口在最前面：
 
 ```bash
 scrcpy --always-on-top
@@ -557,7 +622,7 @@ scrcpy -f  # 简写
 可以通过以下命令旋转窗口：
 
 ```bash
-scrcpy --rotation 1
+scrcpy --rotation=1
 ```
 
 可选的值有：
@@ -590,7 +655,7 @@ scrcpy -n
 如果设备有多个显示屏，可以选择要镜像的显示屏：
 
 ```bash
-scrcpy --display 1
+scrcpy --display=1
 ```
 
 可以通过如下命令列出所有显示屏的 id：
@@ -611,7 +676,7 @@ scrcpy --stay-awake
 scrcpy -w
 ```
 
-scrcpy 关闭时会恢复设备原来的设置。
+`scrcpy` 关闭时会恢复设备原来的设置。
 
 
 #### 关闭设备屏幕
@@ -627,7 +692,7 @@ scrcpy -S
 
 要重新打开屏幕，按下 <kbd>MOD</kbd>+<kbd>Shift</kbd>+<kbd>o</kbd>。
 
-在Android上，`电源` 按钮始终能把屏幕打开。为了方便，对于在 _scrcpy_ 中发出的 `电源` 事件 (通过鼠标右键或 <kbd>MOD</kbd>+<kbd>p</kbd>)，会 (尽最大的努力) 在短暂的延迟后将屏幕关闭。设备上的 `电源` 按钮仍然能打开设备屏幕。
+在 Android 上，`电源` 按钮始终能把屏幕打开。为了方便，对于在 _scrcpy_ 中发出的 `电源` 事件 (通过鼠标右键或 <kbd>MOD</kbd>+<kbd>p</kbd>)，会 (尽最大的努力) 在短暂的延迟后将屏幕关闭。设备上的 `电源` 按钮仍然能打开设备屏幕。
 
 还可以同时阻止设备休眠：
 
@@ -638,10 +703,20 @@ scrcpy -Sw
 
 #### 退出时息屏
 
-scrcpy 退出时关闭设备屏幕：
+_scrcpy_ 退出时关闭设备屏幕：
 
 ```bash
 scrcpy --power-off-on-close
+```
+
+#### 当启动时开机
+
+默认情况下，在启动时，设备已开机。
+
+若要防止此行为，请执行以下操作：
+
+```bash
+scrcpy --no-power-on
 ```
 
 #### 显示触摸
@@ -699,9 +774,9 @@ scrcpy --disable-screensaver
 
 另外，<kbd>MOD</kbd>+<kbd>Shift</kbd>+<kbd>v</kbd> 会将电脑的剪贴板内容转换为一串按键事件输入到设备。在应用程序不接受粘贴时 (比如 _Termux_)，这项功能可以派上一定的用场。不过这项功能可能会导致非 ASCII 编码的内容出现错误。
 
-**警告：** 将电脑剪贴板的内容粘贴至设备 (无论是通过 <kbd>Ctrl</kbd>+<kbd>v</kbd> 还是 <kbd>MOD</kbd>+<kbd>v</kbd>) 都会将内容复制到设备的剪贴板。如此，任何安卓应用程序都能读取到。您应避免将敏感内容 (如密码) 通过这种方式粘贴。
+**警告：** 将电脑剪贴板的内容粘贴至设备 (无论是通过 <kbd>Ctrl</kbd>+<kbd>v</kbd> 还是 <kbd>MOD</kbd>+<kbd>v</kbd>) 都会将内容复制到 Android 设备的剪贴板。如此，任何安卓应用程序都能读取到。您应避免将敏感内容 (如密码) 通过这种方式粘贴。
 
-一些设备不支持通过程序设置剪贴板。通过 `--legacy-paste` 选项可以修改 <kbd>Ctrl</kbd>+<kbd>v</kbd> 和 <kbd>MOD</kbd>+<kbd>v</kbd> 的工作方式，使它们通过按键事件 (同 <kbd>MOD</kbd>+<kbd>Shift</kbd>+<kbd>v</kbd>) 来注入电脑剪贴板内容。
+一些 Android 设备不支持通过程序设置剪贴板。通过 `--legacy-paste` 选项可以修改 <kbd>Ctrl</kbd>+<kbd>v</kbd> 和 <kbd>MOD</kbd>+<kbd>v</kbd> 的工作方式，使它们通过按键事件 (同 <kbd>MOD</kbd>+<kbd>Shift</kbd>+<kbd>v</kbd>) 来注入电脑剪贴板内容。
 
 要禁用自动剪贴板同步功能，使用`--no-clipboard-autosync`。
 
@@ -711,17 +786,19 @@ scrcpy --disable-screensaver
 
 在按住 <kbd>Ctrl</kbd> 时按下鼠标左键，直到松开鼠标左键前，移动鼠标会使屏幕内容相对于屏幕中心进行缩放或旋转 (如果应用支持)。
 
-具体来说，_scrcpy_ 会在鼠标位置，以及鼠标以屏幕中心镜像的位置分别生成触摸事件。
+从技术上来说，_scrcpy_ 会在鼠标位置，以及鼠标以屏幕中心镜像的位置分别生成触摸事件。
 
 #### 物理键盘模拟 (HID)
 
-默认情况下，scrcpy 使用安卓按键或文本注入，这在任何情况都可以使用，但仅限于ASCII字符。
+默认情况下，_scrcpy_ 使用安卓按键或文本注入，这在任何情况都可以使用，但仅限于 ASCII 字符。
 
-在 Linux 上，scrcpy 可以模拟为 Android 上的物理 USB 键盘，以提供更好地输入体验 (使用 [USB HID over AOAv2][hid-aoav2])：禁用虚拟键盘，并适用于任何字符和输入法。
+或者，scrcpy 可以模拟为 Android 上的物理 USB 键盘，以提供更好地输入体验 (使用 [USB HID over AOAv2][hid-aoav2])：禁用虚拟键盘，并适用于任何字符和输入法。
 
 [hid-aoav2]: https://source.android.com/devices/accessories/aoa2#hid-support
 
-不过，这种方法仅支持 USB 连接以及 Linux平台。
+不过，这种方法仅支持通过 USB 连接的设备。
+
+注意：在 Windows 上，它可能只在 [OTG 模式](#otg) 下有效，而不能在镜像时（如果 USB 设备已被另一个进程打开，则无法打开它，就像 _adb 守护进程_ 一样）
 
 启用 HID 模式：
 
@@ -738,9 +815,9 @@ scrcpy -K  # 简写
 
 #### 物理鼠标模拟 (HID)
 
-与物理键盘模拟类似，可以模拟一个物理鼠标。 同样，它仅在设备通过 USB 连接时才有效，并且目前仅在 Linux 上受支持。
+与物理键盘模拟类似，可以模拟一个物理鼠标。同样，它仅在设备通过 USB 连接时才有效。
 
-默认情况下，scrcpy 使用 Android 鼠标事件注入，使用绝对坐标。 通过模拟物理鼠标，在Android设备上出现鼠标指针，并注入鼠标相对运动、点击和滚动。
+默认情况下，_scrcpy_ 使用 Android 鼠标事件注入，使用绝对坐标。 通过模拟物理鼠标，在Android设备上出现鼠标指针，并注入鼠标相对运动、点击和滚动。
 
 启用此模式:
 
@@ -762,7 +839,7 @@ scrcpy -M  # 简写
 
 可以仅使用物理键盘和鼠标模拟 (HID) 运行 _scrcpy_，就好像计算机键盘和鼠标通过 OTG 线直接插入设备一样。
 
-在这个模式下，_adb_ (USB 调试)是不必要的，且镜像被禁用。
+在这个模式下，`adb` (USB 调试)是不必要的，且镜像被禁用。
 
 启用 OTG 模式:
 
@@ -782,7 +859,7 @@ scrcpy --otg --hid-keyboard --hid-mouse  # 开启 HID 键盘 和 HID 鼠标
 scrcpy --otg                             # 开启 HID 键盘 和 HID 鼠标
 ```
 
-像 `--hid-keyboard` 和 `--hid-mouse` 一样，它只在设备通过 USB 连接时才有效，且目前仅在 Linux 上支持。
+像 `--hid-keyboard` 和 `--hid-mouse` 一样，它只在设备通过 USB 连接时才有效。
 
 
 #### 文本注入偏好
@@ -932,7 +1009,7 @@ _⁵需要安卓版本 Android >= 7。_
 
 ## 自定义路径
 
-要使用指定的 _adb_ 二进制文件，可以设置环境变量 `ADB`：
+要使用指定的 `adb` 二进制文件，可以设置环境变量 `ADB`：
 
 ```bash
 ADB=/path/to/adb scrcpy
@@ -971,6 +1048,16 @@ ADB=/path/to/adb scrcpy
 
 [DEVELOP]: https://github.com/Genymobile/scrcpy/blob/master/DEVELOP.md
 
+## 联系
+
+如果遇到错误，请先阅读 [FAQ]，然后再打开 [issue]。
+
+[issue]: https://github.com/Genymobile/scrcpy/issues
+
+对于一般问题或讨论，您还可以使用：
+
+- Reddit: [`r/scrcpy`](https://www.reddit.com/r/scrcpy)
+- Twitter: [`@scrcpy_app`](https://twitter.com/scrcpy_app)
 
 ## 许可协议
 
